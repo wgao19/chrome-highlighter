@@ -54,6 +54,7 @@ function getCurrentTabUrl(callback) {
  * @param {function(string)} errorCallback - Called when the image is not found.
  *   The callback gets a string that describes the failure reason.
  */
+/*
 function getImageUrl(searchTerm, callback, errorCallback) {
   // Google image search - 100 searches per day.
   // https://developers.google.com/image-search/
@@ -116,3 +117,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+*/
+
+function selectClick (info, tab) {
+  console.log(info.selectionText)
+}
+if (!selection) {
+  var selection = chrome.contextMenus.create({"title": "highlighter", "contexts": ["selection"], "onclick": selectClick})
+}
